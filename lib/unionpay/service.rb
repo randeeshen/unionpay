@@ -109,7 +109,7 @@ module UnionPay
     def form(options={})
       attrs = options.map { |k, v| "#{k}='#{v}'" }.join(' ')
       html = [
-        "<form #{attrs} action='#{@api_url}' method='post'>"
+        "<form #{attrs} action='#{@api_url}' method='post' style='display:inline;'>"
       ]
       args.each do |k, v|
         html << "<input type='hidden' name='#{k}' value='#{v}' />"
